@@ -1,8 +1,5 @@
-﻿using Sitecore.Caching;
-using Sitecore.Data.DataProviders.Sql;
-using Sitecore.Diagnostics.PerformanceCounters;
+﻿using Sitecore.Data.DataProviders.Sql;
 using System;
-using System.Reflection;
 
 namespace Sitecore.Support.Data.SqlServer
 {
