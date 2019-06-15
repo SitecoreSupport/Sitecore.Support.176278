@@ -1,15 +1,17 @@
 ﻿using Sitecore.Data.DataProviders.Sql;
 using System;
+using Sitecore.Eventing;
+using Sitecore.Abstractions;
 
 namespace Sitecore.Support.Data.SqlServer
 {
   public class SqlServerClientDataStore : Sitecore.Data.SqlServer.SqlServerClientDataStore
   {
-    public SqlServerClientDataStore(SqlDataApi api, string objectLifetime) : base(api, objectLifetime)
+    public SqlServerClientDataStore(SqlDataApi api, string objectLifetime, IEventQueue queue, BaseEventManager eventManager) : base(api, objectLifetime, queue, eventManager)
     {
     }
 
-    public SqlServerClientDataStore(string connectionString, string objectLifetime) : base(connectionString, objectLifetime)
+    public SqlServerClientDataStore(string connectionString, string objectLifetime, IEventQueue queue, BaseEventManager eventManager) : base(connectionString, objectLifetime, queue, eventManager)
     {
     }
 
